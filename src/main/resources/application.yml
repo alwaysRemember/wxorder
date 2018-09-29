@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://118.25.103.96:3306/wxorder?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  redis:
+    host: 118.25.103.96
+    password: tanghaojie0811
+    port: 6379
+server:
+  context-path: /wxorder
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#  path: F:\log
+#  file: F:\log\wxorder.log
+#  level:
+#    com.thj.wxorder.LoggerTest:debug
+#  level: debug
+wechat:
+  mp-app-id: wxdd3a3079f7ddb38b
+  mp-app-secret: 330a1ebe97b350acc1834ff5bd83f862
+  mch-id: 1409146202
+  mch-key: sdfasdfasdfasdfasdfasdf
+  key-path: /var/wexin_cert/h5.p12
+  notify-url: http://www.baidu.com
+  openAppId: wxdd3a3079f7ddb38b
+  openAppSecret: 330a1ebe97b350acc1834ff5bd83f862
+  templateId: sdfasdfasdfas
+projectUrl:
+  wechatMpAuthorize: http://www.thjtest.cn/wechat/userInfo
+  wechatOpenAuthorize: http://www.thjtest.cn/wechat/qrUserInfo
+  sell: http://www.thjtest.cn/sell
