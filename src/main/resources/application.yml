@@ -11,7 +11,8 @@ spring:
     password: tanghaojie0811
     port: 6379
 server:
-  context-path: /wxorder
+  servlet:
+    context-path: /wxorder
 #logging:
 #  pattern:
 #    console: "%d - %msg%n"
@@ -30,7 +31,7 @@ wechat:
   openAppId: wxdd3a3079f7ddb38b
   openAppSecret: 330a1ebe97b350acc1834ff5bd83f862
   templateId: sdfasdfasdfas
-projectUrl:
+project-url:
   wechatMpAuthorize: http://www.thjtest.cn/wechat/userInfo
   wechatOpenAuthorize: http://www.thjtest.cn/wechat/qrUserInfo
   sell: http://www.thjtest.cn/sell

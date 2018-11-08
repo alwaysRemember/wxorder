@@ -1,7 +1,6 @@
 package com.thj.wxorder.repository;
 
 import com.thj.wxorder.dataobject.ProductCategory;
-import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -14,6 +13,10 @@ public interface ProductCategoryRepository extends JpaRepository<ProductCategory
     List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
 
     List<ProductCategory> findByCategoryNameContains(String categoryName);
+
+    ProductCategory findByCategoryId(Integer categoryId);
+
+    void delete(Integer categoryId);
 
 //    Integer deleteByCategoryId(Integer categoryId);
 }

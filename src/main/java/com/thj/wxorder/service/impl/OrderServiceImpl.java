@@ -112,7 +112,7 @@ public class OrderServiceImpl implements OrderService {
             throw new WxorderException(ResultEnum.ORDER_NOT_EXIST);
         }
 
-        List<OrderDetail> orderDetailList = orderDetailRepository.findByOrderId(orderId);
+        List<OrderDetail> orderDetailList = (List<OrderDetail>) orderDetailRepository.findOne(orderId);
         if ( CollectionUtils.isEmpty(orderDetailList) ) {
             log.error(new Date()+"【获取订单详情失败】订单详情不存在,orderId={}",orderId);
             throw new WxorderException(ResultEnum.ORDERDETAIL_NOT_EXIST);

@@ -24,7 +24,7 @@ public class ProductCategoryRepositoryTest {
 
     @Test
     public void findOneTest () {
-        ProductCategory productCategory = repository.findOne (1);
+        ProductCategory productCategory = repository.findByCategoryId (1);
         System.out.println (productCategory.toString ());
     }
 
@@ -44,7 +44,7 @@ public class ProductCategoryRepositoryTest {
     @Test
     public void deleteTest () {
         Integer id = 1;
-        ProductCategory productCategory = repository.findOne (id);
+        ProductCategory productCategory = repository.findByCategoryId (id);
         if (productCategory != null) {
             repository.delete (id);
             System.out.println ("已删除：｛｝" + id);
